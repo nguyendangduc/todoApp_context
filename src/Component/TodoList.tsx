@@ -2,10 +2,10 @@ import React from "react";
 import { TodoListItem } from "./TodoListItem";
 
 interface Props {}
-import { useGlobalContext } from "../services/AppContext";
+import { useTodoContext } from "../services/TodoContext";
 
 export const TodoList: React.FC<Props> = (props) => {
-  const { todos, filterTodo } = useGlobalContext();
+  const { todos, filterTodo } = useTodoContext();
   return (
     <div className="list">
       <ul>

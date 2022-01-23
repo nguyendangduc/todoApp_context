@@ -8,10 +8,10 @@ interface Props {
   todo: Todo;
   index: number;
 }
-import { useGlobalContext } from "../services/AppContext";
+import { useTodoContext } from "../services/TodoContext";
 
 export const TodoListItem: React.FC<Props> = (props) => {
-  const{ toggleTodo , deleteTodo} = useGlobalContext()
+  const{ toggleTodo , deleteTodo} = useTodoContext()
   const { todo, index } = props
   function handleDelete(): void {
     if(todo.complete) {

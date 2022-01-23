@@ -6,10 +6,10 @@ export interface Todo {
 
 interface Props {
 }
-import { useGlobalContext } from "../services/AppContext";
+import { useTodoContext } from "../services/TodoContext";
 
 export const AddTodoForm: React.FC<Props> = ({ }) => {
-  const {addTodo} = useGlobalContext()
+  const {addTodo} = useTodoContext()
   const [text, setText] = useState("");
 
   return (
